@@ -1,12 +1,17 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
-import { Redirect, Router } from "react-router-dom";
+import Login from "./components/Login";
+
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" Component={Home} />
+        <Route exact path="/login" Component={Login} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
